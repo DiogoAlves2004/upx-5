@@ -9,35 +9,35 @@ using Flunt.Notifications;
 
 namespace Infra.UPX4.Service.Services
 {
-    public class PontoDeAcessibilidadeService : IPontoDeAcessibilidadeService
+    public class ProdutoService : IProdutoService
     {
-        private IRepository<PontoDeAcessibilidadeEntity> _pontoDeAcessibilidadeRepository;
+        private IRepository<ProdutoEntity> _pontoDeAcessibilidadeRepository;
         private readonly IMapper _mapper;
 
 
-        public PontoDeAcessibilidadeService(IRepository<PontoDeAcessibilidadeEntity> pontoRepository, IMapper mapper)
+        public ProdutoService(IRepository<ProdutoEntity> pontoRepository, IMapper mapper)
         {
             _pontoDeAcessibilidadeRepository = pontoRepository;
             _mapper = mapper;
         }
 
-        public Task<PontoDeAcessibilidadeDto> Selecionar(Guid id)
+        public Task<ProdutoDto> Selecionar(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<PontoDeAcessibilidadeDto>> Listar()
+        public Task<IEnumerable<ProdutoDto>> Listar()
         {
             throw new NotImplementedException();
         }
 
-        public async Task<PontoDeAcessibilidadeDto> Salvar(PontoDeAcessibilidadeDto ponto)
+        public async Task<ProdutoDto> Salvar(ProdutoDto ponto)
         {
-            var pontoModel = _mapper.Map<PontoDeAcessibilidadeModel>(ponto);
-            var pontoEntity = _mapper.Map<PontoDeAcessibilidadeEntity>(pontoModel);
+            var pontoModel = _mapper.Map<ProdutoModel>(ponto);
+            var pontoEntity = _mapper.Map<ProdutoEntity>(pontoModel);
             var result = await _pontoDeAcessibilidadeRepository.InsertAsync(pontoEntity);
 
-            return _mapper.Map<PontoDeAcessibilidadeDto>(result);
+            return _mapper.Map<ProdutoDto>(result);
 
         }
 

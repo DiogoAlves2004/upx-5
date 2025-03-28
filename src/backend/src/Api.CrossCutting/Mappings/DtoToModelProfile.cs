@@ -10,7 +10,7 @@ namespace Infra.UPX4.Ioc.Mappings
         {
             CreateMap<UserModel, UserDto>().ReverseMap();
             
-            CreateMap<PontoDeAcessibilidadeModel, PontoDeAcessibilidadeDto>().ReverseMap();
+            CreateMap<ProdutoModel, ProdutoDto>().ReverseMap();
 
         }
 

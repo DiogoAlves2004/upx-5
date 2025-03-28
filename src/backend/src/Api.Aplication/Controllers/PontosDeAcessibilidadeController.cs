@@ -13,10 +13,10 @@ namespace Api.UPX4.Controllers
     [Route("api/v1/[controller]")]
     public class PontosDeAcessibilidadeController : ControllerBase
     {
-        private readonly IPontoDeAcessibilidadeService _pontoService;
+        private readonly IProdutoService _pontoService;
 
 
-        public PontosDeAcessibilidadeController(IPontoDeAcessibilidadeService pontoService)
+        public PontosDeAcessibilidadeController(IProdutoService pontoService)
         {
             _pontoService = pontoService;
         }
@@ -24,7 +24,7 @@ namespace Api.UPX4.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Salvar([FromBody] PontoDeAcessibilidadeDto pontodeacessibilidade)
+        public async Task<IActionResult> Salvar([FromBody] ProdutoDto pontodeacessibilidade)
         {
 
             if (!ModelState.IsValid)

@@ -7,7 +7,7 @@ namespace Infra.UPX4.Data.Context
     public class MyContext : DbContext
     {
         public DbSet<UserEntity> Users { get; set; }
-        public DbSet<PontoDeAcessibilidadeEntity> PontosDeAcessibilidade { get; set; }
+        public DbSet<ProdutoEntity> PontosDeAcessibilidade { get; set; }
 
 
 

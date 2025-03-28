@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infra.UPX4.Data.Repository
 {
-    public class PontoDeAcessibilidadeRepository : BaseRepository<PontoDeAcessibilidadeEntity>, IPontoDeAcessibilidadeRepository
+    public class PontoDeAcessibilidadeRepository : BaseRepository<ProdutoEntity>, IProdutoRepository
     {
-        private DbSet<PontoDeAcessibilidadeEntity> _dataset;
+        private DbSet<ProdutoEntity> _dataset;
 
         public PontoDeAcessibilidadeRepository(MyContext context) : base(context)
         {
-            _dataset = _context.Set<PontoDeAcessibilidadeEntity>();
+            _dataset = _context.Set<ProdutoEntity>();
         }
 
     }
