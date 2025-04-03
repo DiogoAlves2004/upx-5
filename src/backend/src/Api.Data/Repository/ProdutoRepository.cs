@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infra.UPX4.Data.Repository
 {
-    public class PontoDeAcessibilidadeRepository : BaseRepository<ProdutoEntity>, IProdutoRepository
+    public class ProdutoRepository : BaseRepository<ProdutoEntity>, IProdutoRepository
     {
         private DbSet<ProdutoEntity> _dataset;
 
-        public PontoDeAcessibilidadeRepository(MyContext context) : base(context)
+        public ProdutoRepository(MyContext context) : base(context)
         {
             _dataset = _context.Set<ProdutoEntity>();
         }

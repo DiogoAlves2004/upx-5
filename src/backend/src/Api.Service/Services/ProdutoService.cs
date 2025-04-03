@@ -15,9 +15,9 @@ namespace Infra.UPX4.Service.Services
         private readonly IMapper _mapper;
 
 
-        public ProdutoService(IRepository<ProdutoEntity> pontoRepository, IMapper mapper)
+        public ProdutoService(IRepository<ProdutoEntity> produtoRepository, IMapper mapper)
         {
-            _pontoDeAcessibilidadeRepository = pontoRepository;
+            _pontoDeAcessibilidadeRepository = produtoRepository;
             _mapper = mapper;
         }
 

@@ -19,7 +19,7 @@ namespace Infra.UPX4.Ioc.DependencyInjection
             // addSingleton - same
             // addScope - new
             // transient - new
-            serviceCollection.AddTransient<IProdutoRepository, PontoDeAcessibilidadeRepository>();
+            serviceCollection.AddTransient<IProdutoRepository, ProdutoRepository>();
             serviceCollection.AddTransient<IProdutoService, ProdutoService>();
 
         }
